@@ -17,6 +17,6 @@ mongoose.connect(mongoDB)
 app.use('/landing-page', routes);
 
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log('Server listening on port 3000');
 });
