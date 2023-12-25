@@ -3,7 +3,7 @@ const router = express.Router();
 const LandingPage = require('../models/LandingPage');
 
 // Route 1:Get landing page
-router.get('/', async (req, res) => {
+router.get('/get-landing-page', async (req, res) => {
   try {
     const landingPage = await LandingPage.findOne();
     res.json(landingPage);
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 });
 
 // Route 2:Create landing page
-router.post('/', async (req, res) => {
+router.post('/create-landing-page', async (req, res) => {
   try {
     const landingPage = new LandingPage(req.body);
     await landingPage.save();
@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
 });
 
 // Route 3:Update landing page
-router.put('/', async (req, res) => {
+router.put('/update-landing-page', async (req, res) => {
   try {
     const landingPage = await LandingPage.findOne();
     landingPage.set(req.body);
@@ -39,7 +39,7 @@ router.put('/', async (req, res) => {
 });
 
 // Route 4:Delete landing page
-router.delete('/', async (req, res) => {
+router.delete('/delete-landing-page', async (req, res) => {
   try {
     await LandingPage.deleteOne();
     res.send('Landing page deleted successfully');
