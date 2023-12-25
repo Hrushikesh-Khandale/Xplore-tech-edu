@@ -1,55 +1,52 @@
 const express = require('express');
-const LandingPage = require('../models/LandingPage');
-
 const router = express.Router();
+const LandingPage = require('../models/LandingPage'); 
 
-// Fetch landing page data
+// Route 1:Get landing page
 router.get('/', async (req, res) => {
-  const landingPage = await LandingPage.findOne();
-  if (!landingPage) {
-    return res.status(404).send('Landing page not found');
+  try {
+    const landingPage = await LandingPage.findOne();
+    res.json(landingPage);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server Error');
   }
-  res.json(landingPage);
 });
 
-// Create new landing page
+// Route 2:Create landing page
 router.post('/', async (req, res) => {
-  const landingPageData = req.body;
-  const newLandingPage = new LandingPage(landingPageData);
-  await newLandingPage.save();
-  res.status(201).json({ message: 'Landing page created' });
+  try {
+    const landingPage = new LandingPage(req.body);
+    await landingPage.save();
+    res.json(landingPage);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server Error');
+  }
 });
 
-// Update landing page data
+// Route 3:Update landing page
 router.put('/', async (req, res) => {
-  const landingPageData = req.body;
-  const existingLandingPage = await LandingPage.findOne();
-
-  if (!existingLandingPage) {
-    return res.status(404).send('Landing page not found');
+  try {
+    const landingPage = await LandingPage.findOne();
+    landingPage.set(req.body);
+    await landingPage.save();
+    res.json(landingPage);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server Error');
   }
-
-  existingLandingPage.heroTitle = landingPageData.heroTitle;
-  existingLandingPage.heroDescription = landingPageData.heroDescription;
-  existingLandingPage.aboutContent = landingPageData.aboutContent;
-  existingLandingPage.contactForm.name = landingPageData.contactForm.name;
-  existingLandingPage.contactForm.email = landingPageData.contactForm.email;
-  existingLandingPage.contactForm.message = landingPageData.contactForm.message;
-
-  await existingLandingPage.save();
-  res.status(200).send({ message: 'Landing page updated' });
 });
 
-// Delete landing page data
-router.delete('/:id', async (req, res) => {
-  const landingPageId = req.params.id;
-  const landingPage = await LandingPage.findByIdAndDelete(landingPageId);
-
-  if (!landingPage) {
-    return res.status(404).send('Landing page not found');
+// Route 4:Delete landing page
+router.delete('/', async (req, res) => {
+  try {
+    await LandingPage.deleteOne();
+    res.send('Landing page deleted successfully');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server Error');
   }
-
-  res.status(200).send({ message: 'Landing page deleted' });
 });
 
 module.exports = router;
