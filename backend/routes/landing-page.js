@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const LandingPage = require('../models/LandingPage'); 
+const LandingPage = require('../models/LandingPage');
 
 // Route 1:Get landing page
 router.get('/', async (req, res) => {
