@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const express=require('express');
 const app = express();
-const routes = require('./routes/landing-page');
+const PORT= 8000;
 
 const mongoDB = 'mongodb://localhost:27017/landing-page-database';
 
@@ -14,9 +14,9 @@ mongoose.connect(mongoDB)
   });
 
 
-app.use('/landing-page', routes);
+app.use('/landing-page', require('./routes/landing-page'));
 
 
-app.listen(3001, () => {
-  console.log('Server listening on port 3000');
+app.listen(PORT, () => {
+  console.log(`'Server listening on port http://localhost:${PORT}`);
 });
