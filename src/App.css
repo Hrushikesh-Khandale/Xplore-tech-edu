@@ -5,7 +5,7 @@
 }
 
 body {
-  background: url('./components/landing-background.jpg') fixed center no-repeat;
+  background: url("./components/landing-background.jpg") fixed center no-repeat;
   background-size: cover;
   height: 100vh;
 }
@@ -14,10 +14,15 @@ body {
   background-color: #001529;
   height: 4rem;
   border-color: #666;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, .15);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+header section {
+  position: relative;
+  left: 3rem;
 }
 
 .logo {
@@ -35,7 +40,7 @@ body {
 
 .navLists li {
   color: #d9d9d9;
-  margin-left: 2rem;
+  margin-right: 7rem;
   align-content: center;
   cursor: pointer;
 }
@@ -103,3 +108,32 @@ body {
     display: flex;
   }
 }
+
+/* Dropdown Menu */
+
+.dropDown{
+  width: fit-content;
+  position: relative;
+}
+
+li a{
+  display: block;
+  color: #d9d9d9;
+  text-decoration: none;
+}
+
+li  :hover{
+  color: white;
+
+}
+
+
+
+.dropDown .dropdnOptions{
+  position: relative;
+  width: 7rem;
+  top: 1.2rem;
+  padding: 8px;
+  opacity: 1;
+}
+
