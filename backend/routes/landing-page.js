@@ -16,7 +16,9 @@ router.get('/get-landing-page', async (req, res) => {
 // Route 2:Create landing page
 router.post('/create-landing-page', async (req, res) => {
   try {
-    const landingPage = new LandingPage(req.body);
+    const landingPage =await new LandingPage({
+      
+    });
     await landingPage.save();
     res.json(landingPage);
   } catch (error) {
