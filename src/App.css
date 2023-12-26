@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+/* Navbar */
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: url('./components/landing-background.jpg') fixed center no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navBar {
+  background-color: #001529;
+  height: 4rem;
+  border-color: #666;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, .15);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.logo {
+  font-size: xx-large;
+  text-decoration: none;
+  font-weight: 600;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navLists {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navLists li {
+  color: #d9d9d9;
+  margin-left: 2rem;
+  align-content: center;
+  cursor: pointer;
+}
+
+.navLists li:hover {
+  color: white;
+}
+
+.navLists .link {
+  color: #d9d9d9;
+  margin-left: 2rem;
+  align-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navLists .link:hover {
+  color: white;
+}
+
+/* Collapsible Navbar Styles */
+.collapsed {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  background-color: #001529;
+  text-align: center;
+  z-index: 1;
+}
+
+.collapsed .link {
+  padding: 1rem;
+  color: white;
+}
+
+/* Hamburger Icon Styles */
+.menu-toggle {
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 650px) {
+  .navLists {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .collapsed {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
   }
 }
