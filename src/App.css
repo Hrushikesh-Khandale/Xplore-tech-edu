@@ -140,6 +140,9 @@ li :hover {
   margin: 0 auto;
 }
 
+
+
+/* Homepage Initial Texts */
 .homepage .p1 {
   position: relative;
   left: 45.2%;
@@ -173,6 +176,8 @@ li :hover {
   color: white;
 }
 
+
+/* Link Button */
 .homepage .learnMore {
   padding: 1rem;
   border: 1px solid white;
@@ -181,11 +186,39 @@ li :hover {
   position: relative;
   left: 46.4%;
   top: 8%;
-
 }
 
 
 .homepage .learnMore:hover{
   box-shadow: #007c9e 0px 0px  10px;
   transition: .2s all ease-out;
+}
+
+
+
+/* Arrow */
+
+.homepage svg{
+  color: white;
+  height: 2rem;
+  position: relative;
+  left: 49%;
+}
+
+/*  Arrow Animation  */
+
+.homepage .downArrow{
+  position: relative;
+  top: 20%;
+  -webkit-animation: mover 1s infinite alternate;
+  animation:  mover 1s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
 }
