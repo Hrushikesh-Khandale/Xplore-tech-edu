@@ -111,25 +111,22 @@ header section {
 
 /* Dropdown Menu */
 
-.dropDown{
+.dropDown {
   width: fit-content;
   position: relative;
 }
 
-li a{
+li a {
   display: block;
   color: #d9d9d9;
   text-decoration: none;
 }
 
-li  :hover{
+li :hover {
   color: white;
-
 }
 
-
-
-.dropDown .dropdnOptions{
+.dropDown .dropdnOptions {
   position: relative;
   width: 7rem;
   top: 1.2rem;
@@ -137,3 +134,58 @@ li  :hover{
   opacity: 1;
 }
 
+/* Homepage */
+.homepage {
+  height: 100rem;
+  margin: 0 auto;
+}
+
+.homepage .p1 {
+  position: relative;
+  left: 45.2%;
+  top: 5%;
+  width: fit-content;
+  font-weight: 800;
+  font-size: 15rem;
+  color: white;
+  text-shadow: white 1px 1px 15px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.homepage .p2 {
+  position: relative;
+  left: 44%;
+  top: 3%;
+  width: fit-content;
+  font-weight: 600;
+  font-size: 4rem;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.homepage .p3 {
+  position: relative;
+  left: 43%;
+  top: 3%;
+  width: fit-content;
+  font-size: 1.5rem;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.homepage .learnMore {
+  padding: 1rem;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  left: 46.4%;
+  top: 8%;
+
+}
+
+
+.homepage .learnMore:hover{
+  box-shadow: #007c9e 0px 0px  10px;
+  transition: .2s all ease-out;
+}
