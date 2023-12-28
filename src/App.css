@@ -108,13 +108,10 @@ header section {
     display: flex;
   }
 
-  .languageLinks{
+  .languageLinks {
     display: flex;
   }
-
 }
-
-
 
 /* Dropdown Menu */
 
@@ -146,8 +143,6 @@ li :hover {
   height: 48rem;
   margin: 0 auto;
 }
-
-
 
 /* Homepage Initial Texts */
 .homepage .p1 {
@@ -183,7 +178,6 @@ li :hover {
   color: white;
 }
 
-
 /* Link Button */
 .homepage .learnMore {
   padding: 1rem;
@@ -195,17 +189,14 @@ li :hover {
   top: 22%;
 }
 
-
-.homepage .learnMore:hover{
-  box-shadow: #007c9e 0px 0px  10px;
-  transition: .2s all ease-out;
+.homepage .learnMore:hover {
+  box-shadow: #007c9e 0px 0px 10px;
+  transition: 0.2s all ease-out;
 }
-
-
 
 /* Arrow */
 
-.homepage svg{
+.homepage svg {
   color: white;
   height: 2.5rem;
   width: 2%;
@@ -216,65 +207,112 @@ li :hover {
 
 /*  Arrow Animation  */
 
-.homepage .downArrow{
+.homepage .downArrow {
   position: relative;
   top: 30%;
   -webkit-animation: mover 1s infinite alternate;
-  animation:  mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
 }
 
 @-webkit-keyframes mover {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-15px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
 }
 @keyframes mover {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-15px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
 }
-
-
-
-
 
 /* Programming laguages */
 
-.languageLinks{
- background-color: white;
- height: 100rem; 
- text-align: center;
-
+.languageLinks {
+  background-color: white;
+  height: 30rem;
+  text-align: center;
 }
 
 .languageLinks .languageHeader {
   position: relative;
   top: 4rem;
   color: #665;
-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 
 /* icons(links) */
-.languageLinks .container{
-position: relative;
-top: 9rem;
-display: flex;
-justify-content: space-evenly;
+.languageLinks .container {
+  position: relative;
+  top: 9rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.languageLinks button{
+.languageLinks button {
   border-radius: 10px;
   border: white 1px solid;
   box-shadow: rgb(206, 206, 206) 8px 8px 10px;
   cursor: pointer;
 }
 
-.languageLinks  img{
+.languageLinks img {
   height: 9rem;
   width: 8rem;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.languageLinks  img:hover{
-  transform:scale(1.2);
+.languageLinks img:hover {
+  transform: scale(1.2);
 }
 
+/* Description */
+h1{
+  color: #665;
+  background-color: white;
+  text-align: center;
+}
+
+.description {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  height: 50rem;
+}
+
+.description svg {
+  width: 9rem;
+  color: #001529;
+  padding: 2rem;
+  border-radius: 125rem;
+ 
+  transition: all 0.3s ease-in-out;
+}
+
+.description svg:hover {
+  background: linear-gradient(
+    115deg,
+    rgb(141, 216, 22) 0.6369426751592356%,
+    rgb(15, 197, 239) 100%
+  );
+}
+
+
+.description span {
+  width: 9rem;
+  color: #001529;
+  border-radius: 125rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+ 
+}
+
+.description h2 {
+  font-weight: normal;
+}

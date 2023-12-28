@@ -4,6 +4,7 @@ import CSS from "./LOGOS/css.png";
 import JS from "./LOGOS/js.png";
 import NODEJS from "./LOGOS/nodejs.png";
 import REACTJS from "./LOGOS/reactjs.png";
+import Description from "./Description";
 
 const Homepage = () => {
   return (
@@ -104,6 +105,11 @@ const Homepage = () => {
             <b><p>ReactJS</p></b>
           </button>
         </div>
+        
+      </div>
+
+      <div>
+        <Description/>
       </div>
     </>
   );
