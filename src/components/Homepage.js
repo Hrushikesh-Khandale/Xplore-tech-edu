@@ -67,7 +67,7 @@ const Homepage = () => {
             >
               <img src={CSS} alt="CSS" />
             </a>
-            <b><p>Javascript</p></b>
+            <b><p>CSS</p></b>
           </button>
           {/* JS */}
           <button className="javascript">
@@ -78,7 +78,7 @@ const Homepage = () => {
             >
               <img src={JS} alt="Javascript" />
             </a>
-            <b><p>CSS</p></b>
+            <b><p>Javascript</p></b>
           </button>
           {/* Nodejs */}
 
