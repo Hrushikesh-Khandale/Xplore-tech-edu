@@ -6,6 +6,9 @@ import Homepage from "./components/Homepage";
 import Navbar from "./components/Navbar";
 
 const App = () => {
+
+
+
   return (
     <Router>
       <Navbar />
