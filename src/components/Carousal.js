@@ -3,8 +3,6 @@ import { Carousel } from "antd";
 
 const Carousal = () => {
 
-    }
-
   return (
     <>
       <div className="carousalContainer">
