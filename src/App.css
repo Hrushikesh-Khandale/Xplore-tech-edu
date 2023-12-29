@@ -271,11 +271,20 @@ li :hover {
   transform: scale(1.2);
 }
 
-/* Description */
-h1{
+
+
+                /* Description */
+.services{
   color: #665;
   background-color: white;
   text-align: center;
+}
+
+.description .card{
+  width: 45rem;
+  text-align: center;
+  position: relative;
+  top: 5rem;
 }
 
 .description {
@@ -283,11 +292,11 @@ h1{
   text-align: center;
   display: flex;
   justify-content: space-around;
-  height: 50rem;
+  height: 38rem;
 }
 
 .description svg {
-  width: 9rem;
+  width: 4rem;
   color: #001529;
   padding: 2rem;
   border-radius: 125rem;
@@ -297,10 +306,11 @@ h1{
 
 .description svg:hover {
   background: linear-gradient(
-    115deg,
+    10deg,
     rgb(141, 216, 22) 0.6369426751592356%,
     rgb(15, 197, 239) 100%
   );
+  cursor: pointer;
 }
 
 
@@ -308,11 +318,29 @@ h1{
   width: 9rem;
   color: #001529;
   border-radius: 125rem;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
- 
+  font-size: .9rem;
 }
 
 .description h2 {
   font-weight: normal;
 }
+
+
+
+          /* Carousal */
+
+.carousal{
+  width: 35rem;
+  height: 20rem;
+  text-align: center;
+  box-shadow: inset #aeaeae 0px 0px 20px;
+  position: relative;
+  margin: 0 auto;
+}
+
+
+.carousalContainer{
+  background-color:rgb(245, 245, 245);
+  padding: 5px;
+}
+

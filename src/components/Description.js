@@ -1,12 +1,15 @@
 import React from "react";
+import "../App.css";
+import Carousal from '../components/Carousal';
+
 
 const Description = () => {
   return (
     <>
-      <h1>Services</h1>
+      <h1 className="services">Services</h1>
       <div className="description">
         {/* Learning Hub */}
-        <div>
+        <div className="card">
           <span>
             <svg
               data-slot="icon"
@@ -25,10 +28,14 @@ const Description = () => {
             </svg>
           </span>
           <h2>Learning Hub</h2>
+          <span>
+            providing resources for individuals interested in programming
+            languages.
+          </span>
         </div>
 
         {/* Diverse Content */}
-        <div>
+        <div className="card">
           <span>
             <svg
               data-slot="icon"
@@ -47,10 +54,15 @@ const Description = () => {
             </svg>
           </span>
           <h2>Diverse Content</h2>
+          <span>
+            {" "}
+            This ensures a diverse set of resources to cater to different
+            learning preferences.
+          </span>
         </div>
 
         {/* User Friendly Interface */}
-        <div>
+        <div className="card">
           <span>
             <svg
               data-slot="icon"
@@ -69,10 +81,14 @@ const Description = () => {
             </svg>
           </span>
           <h2>User Friendly Interface</h2>
+          <span>
+            The web app features a user-friendly interface with a visually
+            appealing design.
+          </span>
         </div>
 
         {/* Encouraging Exploration */}
-        <div>
+        <div className="card">
           <span>
             <svg
               data-slot="icon"
@@ -91,8 +107,12 @@ const Description = () => {
             </svg>
           </span>
           <h2> Encouraging Exploration</h2>
+          <span>
+            Encourages users to explore emerging technologies and trends exploration beyond the basics.
+          </span>
         </div>
       </div>
+      <Carousal/>
     </>
   );
 };
