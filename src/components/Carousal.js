@@ -36,7 +36,7 @@ const Carousal = () => {
         <h1>Latest News</h1>
         <br />
         <br />
-        <Carousel autoplay className="carousel">
+        <Carousel autoplay infinite={true} className="carousel">
           {articles.map((element) => (
             <div key={element.url} className="carouselItem">
               {/* Render other fields on the other side */}

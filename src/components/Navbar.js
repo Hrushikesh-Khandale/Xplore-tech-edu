@@ -43,8 +43,12 @@ const Navbar = () => {
               menuVariant="dark"
               className="dropDown"
             >
-              <NavDropdown.Item className="dropdnOptions"  href="/">Tutorials</NavDropdown.Item>
-              <NavDropdown.Item className="dropdnOptions" href="/">Feedback</NavDropdown.Item>
+              <NavDropdown.Item className="dropdnOptions" href="/">
+                Tutorials
+              </NavDropdown.Item>
+              <NavDropdown.Item className="dropdnOptions" href="/">
+                Feedback
+              </NavDropdown.Item>
             </NavDropdown>
           </li>
         </ul>
