@@ -57,7 +57,9 @@ const Homepage = () => {
             >
               <img src={HTML} alt="HTML" />
             </a>
-            <b><p>HTML</p></b>
+            <b>
+              <p>HTML</p>
+            </b>
           </button>
           {/* css */}
           <button className="css">
@@ -68,7 +70,9 @@ const Homepage = () => {
             >
               <img src={CSS} alt="CSS" />
             </a>
-            <b><p>CSS</p></b>
+            <b>
+              <p>CSS</p>
+            </b>
           </button>
           {/* JS */}
           <button className="javascript">
@@ -79,7 +83,9 @@ const Homepage = () => {
             >
               <img src={JS} alt="Javascript" />
             </a>
-            <b><p>Javascript</p></b>
+            <b>
+              <p>Javascript</p>
+            </b>
           </button>
           {/* Nodejs */}
 
@@ -91,25 +97,24 @@ const Homepage = () => {
             >
               <img src={NODEJS} alt="NodeJS" />
             </a>
-            <b><p>NodeJS</p></b>
+            <b>
+              <p>NodeJS</p>
+            </b>
           </button>
           {/* Reactjs */}
           <button className="reactjs">
-            <a
-              href="https://react.dev/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://react.dev/" target="_blank" rel="noreferrer">
               <img src={REACTJS} alt="ReactJS" />
             </a>
-            <b><p>ReactJS</p></b>
+            <b>
+              <p>ReactJS</p>
+            </b>
           </button>
         </div>
-        
       </div>
 
       <div>
-        <Description/>
+        <Description />
       </div>
     </>
   );
